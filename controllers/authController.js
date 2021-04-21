@@ -6,7 +6,7 @@ authentication.signIn = async (req, res) => {
     
     const {saludo,nombre} =req.body;
   
-   const clientes= await(await pool.query("SELECT * FROM clientes ")).rows;
+   const clientes= await(await pool.query("SELECT * FROM usuarios ")).rows;
 
    console.log(clientes);
 
