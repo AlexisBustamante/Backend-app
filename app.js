@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 //Routes
 app.use('/',require("./routes/auth.routes"));
+app.use("/clientes", require("./routes/clientes.routes"));
 
 
 app.listen(app.get('port'),()=>{
