@@ -20,8 +20,9 @@ app.use(history());
 app.use(express.static(path.join(__dirname,'public')));
 
 //Routes
-app.use('/',require("./routes/auth.routes"));
-app.use("/clientes", require("./routes/clientes.routes"));
+app.use('/',require("./router/auth.router"));
+app.use("/clientes", require("./router/clientes.router"));
+app.use("/vehiculos", require("./router/vehiculos.router"));
 
 
 app.listen(app.get('port'),()=>{
